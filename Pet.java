@@ -119,7 +119,7 @@ public class Pet {
                 setName(imput.next());
                 break;
             case 3:
-                System.out.println("Years: "+getName());
+                System.out.println("Years: "+getYears());
                 System.out.println("Enter the new age");
                 setYears(imput.nextInt());
                 break;

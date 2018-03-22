@@ -9,12 +9,14 @@ public class Main {
         vet.showAllPets();
         int option=3;
         do {
+            System.out.println("");
             System.out.println("Enter the number of option: ");
             System.out.println("1: Show all pets");
             System.out.println("2: Enter a new pet");
-            System.out.println("3: Edit a pets");
-            System.out.println("4: Delete a pets");
+            System.out.println("3: Edit a pet");
+            System.out.println("4: Delete a pet");
             System.out.println("5: Exit");
+            System.out.println("");
             option = imput.nextInt();
             switch (option){
                 case 1:

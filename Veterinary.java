@@ -25,7 +25,7 @@ public class Veterinary {
         int years = imput.nextInt();
         System.out.println("Months: ");
         int months = imput.nextInt();
-        System.out.println("Enter the weight of the pet");
+        System.out.println("Enter the weight of the pet: ");
         float weight = imput.nextFloat();
         System.out.println("Enter the Name of the owner: ");
         String owner = imput.next();
@@ -39,6 +39,7 @@ public class Veterinary {
         for (Pet pet: petList) {
             auxID= pet.getId();
             if (auxID == petId)
+                petList.remove(pet);
                 return true;
         }
         return false;
@@ -53,14 +54,17 @@ public class Veterinary {
         else System.out.println("Pet id was not found");
     }
 
-    public Boolean deletePet(Pet pet){
-        return petList.remove(pet);
-    }
 
     public void showAllPets(){
-        for (Pet pet: petList) {
-            pet.showPet();
+        if (petList.isEmpty()) {
+            System.out.println("List is empty");
         }
+        else{
+            for (Pet pet: petList) {
+                pet.showPet();
+            }
+        }
+
     }
 
     public void editPet(){
@@ -74,8 +78,6 @@ public class Veterinary {
                 pet.editAttribute();
                 return;
             }
-
-
         }
         System.out.println("The id was not found");
     }
